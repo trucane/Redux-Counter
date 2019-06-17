@@ -9,8 +9,16 @@ export const DECREMENT = 'DECREMENT';
 // logic of updating the central Redux store. That
 // is left to the reducer(s).
 
+
+
+export const calculate = (action, value) => {
+  return {
+    type:action,
+    payload: value
+  }
+}
+
 export const increment = () => {
-  console.log('I am increment')
   return{
     type:INCREMENT,
     payload: 1
@@ -21,5 +29,5 @@ export const decrement = () => {
   return{
     type:DECREMENT,
     payload: 1
-  }// Fill in this function
+  }
 };
